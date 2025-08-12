@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifest & Monetize - AI Business Kickstart Kit</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+        :root {
+            --purple-dark: #1F1133;
+            --blue-light: #2A1F4C;
+            --gold: #FFD700;
+            --white: #FFFFFF;
+            --gray-light: #C0C0C0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--purple-dark) 0%, var(--blue-light) 100%);
+            color: var(--white);
+            line-height: 1.6;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            padding: 20px 0;
+            text-align: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            animation: pulse 4s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 0.2; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.3; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 0.2; }
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(45deg, #FFD700, #E0A000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--gray-light);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-button {
+            background: linear-gradient(45deg, #FFD700, #E0A000);
+            color: var(--purple-dark);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .section-subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: var(--gray-light);
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+        .grid-item {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .grid-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .grid-item h3 {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        .grid-item p {
+            font-size: 0.95rem;
+            color: var(--gray-light);
+        }
+        .signup-form {
+            max-width: 500px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .signup-form input {
+            width: 100%;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .signup-form input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--gray-light);
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1rem; }
+            .section-title { font-size: 2rem; }
+            .section-subtitle { font-size: 1rem; }
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">Manifest & Monetize</div>
+        </header>
+
+        <section class="hero">
+            <h1 class="animate-in">The <span class="highlight">AI-Powered Blueprint</span> to Manifest & Monetize Your Digital Business</h1>
+            <p class="animate-in delay-1">Get the free Kickstart Kit and discover the elegant roadmap to launch a profitable online business in 30 days.</p>
+            <a href="#signup" class="cta-button animate-in delay-2">Get Your Free Kit Now</a>
+        </section>
+
+        <section class="section" id="problem-solution">
+            <h2 class="section-title">Your Vision. Your Business.</h2>
+            <p class="section-subtitle">Are you an ambitious entrepreneur with a powerful vision but no clear path to bring it to life? Navigating the world of AI, branding, and digital products can feel overwhelming, leaving you with great ideas but no results. We created the AI Business Kickstart Kit as your clear and strategic solution. It’s a step-by-step roadmap that combines spiritual alignment with cutting-edge technology, empowering you to build a profitable and purpose-driven business with grace and ease.</p>
+        </section>
+
+        <section class="section" id="included">
+            <h2 class="section-title">Inside the Free Kickstart Kit</h2>
+            <p class="section-subtitle">Unlock the tools, templates, and knowledge you need to build your business with confidence.</p>
+            <div class="grid-container">
+                <div class="grid-item animate-in">
+                    <h3>The 30-Day Blueprint</h3>
+                    <p>Your complete guide to go from idea to launch in just four weeks.</p>
+                </div>
+                <div class="grid-item animate-in">
+                    <h3>The Quick Start Checklist</h3>
+                    <p>A printable, week-by-week checklist to keep you on track without feeling overwhelmed.</p>
+                </div>
+                <div class="grid-item animate-in">
+                    <h3>The Pricing Strategy Guide</h3>
+                    [span_0](start_span)<p>Learn to price your products for transformation, not for time, so you can attract premium clients with confidence[span_0](end_span).</p>
+                </div>
+                <div class="grid-item animate-in">
+                    <h3>The Legal Templates Pack</h3>
+                    <p>A copy-and-paste guide for your Terms of Service, Privacy Policy, Refund Policy, and Email Disclaimer.</p>
+                </div>
+                <div class="grid-item animate-in">
+                    <h3>The 50+ AI Prompts Library</h3>
+                    <p>Your secret weapon for creating content, course material, and sales copy in minutes.</p>
+                </div>
+                <div class="grid-item animate-in">
+                    <h3>The Social Media Templates Pack</h3>
+                    <p>10 viral scripts to engage your audience and build your brand on Instagram and TikTok.</p>
+                </div>
+                <div class="grid-item animate-in">
+                    <h3>The Email Sequence Swipe File</h3>
+                    <p>A proven welcome sequence that nurtures your audience and a promotional sequence that converts subscribers into customers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="signup">
+            <h2 class="section-title">Claim Your Free Kit</h2>
+            <p class="section-subtitle">Enter your email below to get instant access to the complete AI Business Kickstart Kit and start building your empire today.</p>
+            <form class="signup-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact">
+                <p class="hidden">
+                    <label>
+                        Don't fill this out: <input name="bot-field">
+                    </label>
+                </p>
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit" class="cta-button">Get the Free Kit</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Manifest & Monetize. All Rights Reserved.</p>
+        <p>
+            <a href="#">Terms of Service</a> |
+            <a href="#">Privacy Policy</a>
+        </p>
+    </footer>
+
+</body>
+</html>
