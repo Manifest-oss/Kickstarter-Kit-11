@@ -1,0 +1,1 @@
+{"functions":[{"bundler":"zisi","generator":"internalFunc","buildData":{"runtimeAPIVersion":1},"mainFile":"/app/.netlify/functions-internal/emails/index.js","name":"emails","priority":0,"runtimeVersion":"nodejs22.x","path":"/app/.netlify/functions/emails.zip","runtime":"js"}],"system":{"arch":"x64","platform":"linux"},"timestamp":1755113628170,"version":1}
